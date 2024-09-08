@@ -1,1 +1,8 @@
-# Nonlinear-Dynamics
+# Nonlinear Dynamics
+
+This repository contains different tools that are used to study the dynamics of nonlinear systems.
+
+As of now this repository contains : 
+1. Cobweb Diagram using Python
+
+New content will be added soon...
