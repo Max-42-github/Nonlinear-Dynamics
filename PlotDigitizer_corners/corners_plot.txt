@@ -1,0 +1,14 @@
+reset
+
+set zeroaxis
+set size 0.7,1
+set grid
+set title 'Digitized version of corners.png'
+set xlabel 'x -->'
+set ylabel 'y -->'
+set xtics 0,2.5,30
+
+
+plot 'data_1.txt' w lp pt 7 ps 0.4 lc 'blue' title 'Data 1',\
+'data_2.txt' w lp pt 7 ps 0.4 lc 'red' title 'Data 2',\
+'data_1_scaled.txt' w lp pt 7 ps 0.4 lc 'dark-green' title 'Scaled Data 1 (Scale factor : 10.5)'
