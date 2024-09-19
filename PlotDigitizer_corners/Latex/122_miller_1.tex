@@ -1,0 +1,186 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+
+\title{Introduction to \LaTeX \\ (Part 1 : Basics)}
+\author{Tathagata Karmakar}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Creating itemized lists}
+\begin{itemize}
+\item Tea
+\item Milk
+\item Biscuits
+\end{itemize}
+
+\section{Inclusion of figures}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.15]{gebril}
+\caption{Gebril}
+\end{figure}
+
+\section{Typesetting : Text}
+\begin{itemize}
+
+\item Words are separated by one or more space.
+\item Paragraphs are separated by 
+one or more blank lines
+\item Space in the source file is collapsed in the output :
+\begin{itemize}
+\item The rain    in Spain falls    mainly on   the plains.
+\end{itemize}
+
+\end{itemize}
+
+\section{Typesetting : Quotation marks and symbols}
+\begin{itemize}
+
+\item Single quotes : `text'
+\item Double quotes : ``text''
+\item Some common characters have special meanings in \LaTeX :
+\begin{itemize}
+\item percent sign \%
+\item hash sign \#
+\item ampersand \&
+\item dollar sign \$
+\end{itemize}
+
+\end{itemize}
+To include these symbols in plain text add a backslash on front of the symbol. For example : $\backslash \$, \backslash \%, \backslash \&, \backslash \#$
+
+\section{Handeling Errors}
+If an error occurs during compilation of \LaTeX \ code : 
+\begin{enumerate}
+
+\item \LaTeX \ detect the bug in the code and tries to point it out by specifying line number and the faulty code.
+\item Based in the type of the error occured, \LaTeX \ displays an error message which helps the user to understand the type of error in the code. For example : ``Undefined control sqeuence''  if a \LaTeX \ command is misspelled.
+
+\end{enumerate}
+
+\section{Exercise 1 :}
+In March \(\mathrm{2006}\), Congress raised that ceiling an additional \(\mathrm{\$0.79}\) trillion to \(\mathrm{\$8.97}\) trillion, which is approximately \(\mathrm{68\%}\) of GDP. As of October \(\mathrm{4}\), \(\mathrm{2008}\), the "Emergency Economic Stabilization Act of \(\mathrm{2008}\)" raised the current debt ceiling of \(\mathrm{\$11.3}\) trillion.
+
+
+\section{Typesetting Mathematics : Inline Math}
+
+\begin{itemize}
+
+\item Without inline math : \\
+Let a and b be distinct positive integers, and let c = a -b + 1.
+\item With inline math : \\
+Let $a$ and $b$ be distinct positive integers, and let $c=a-
+b+1$
+
+\end{itemize}
+
+\section{Typesetting Mathematics : Notation}
+\begin{itemize}
+\item Superscripts \& Subscripts : $y = c_2x^2 + c_1x + c_0$
+\item Grouping Notation : $F_n = F_{n-1} + F_{n-2}$ 
+\item Greek letters : $\mu = A e^{{Q}/{RT}} \Omega = \sum_{k = 1}^{n} \omega_{k}$
+
+\end{itemize}
+
+\section{Typesetting Mathematics : Displayed Equations}
+
+To display bigger equations in seperate line, $\backslash \mathrm{begin} \{\mathrm{equation}\}$ and $\backslash \mathrm{end} \{\mathrm{equation}\}$ is used.
+
+The roots of a quadratic equation are given by
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+where $a$, $b$ and $c$ are coefficient \ldots
+
+\section{Environments}
+
+Environments in \LaTeX \ are used to implement specific typesetting effects. For example : \emph{equation}, \emph{enumarate}, \emph{itemize}.
+
+The $\backslash \mathrm{begin}$ and $\backslash \mathrm{end}$ commands are used to create many different evnironments.
+
+Itemize : 
+
+\begin{itemize}
+\item Biscuits
+\item Tea
+\end{itemize}
+
+Enumerate : 
+
+\begin{enumerate}
+\item Biscuits
+\item Tea
+\end{enumerate}
+
+\section{Packages}
+\begin{itemize}
+\item \emph{Packages} are libraries of extra commands and environments, used to implement specific typesettings features in the document.
+
+\item A \emph{package} is added to \LaTeX \ by using the command $\backslash$ $\mathrm{usepackage}$ command in the \emph{preamble} section.
+
+\item Example : $\mathsf{amsmath}$ from the \emph{American Mathematical Society}.
+
+\end{itemize}
+
+
+\section{Examples with $\mathsf{amsmath}$}
+
+\begin{itemize}
+\item Use $\mathsf{equation*}$ for unnumbered eqautions.
+
+\begin{equation*}
+\Omega = \sum_{k=1}^{n} \omega_k
+\end{equation*}
+
+\item $\mathsf{amsmath}$ defines commands for many common mathematical operators.
+\begin{itemize}
+\item Without $\mathsf{amsmath}$ operator : 
+\begin{equation*}
+min_{x,y} (1-x)^2 + 100(y-x^2)^2
+\end{equation*}
+\item With $\mathsf{amsmath}$ operator : 
+\begin{equation*}
+\min_{x,y} (1-x)^2 + 100(y-x^2)^2
+\end{equation*}
+
+\end{itemize}
+
+\item $\backslash \mathrm{operatorname}$ command for other operators : 
+\begin{equation*}
+\beta_i = 
+\frac{\operatorname{Cov}(R_i, R_m)}
+{\operatorname{Var}(R_m)}
+\end{equation*}
+
+\item Align a sequence of equations using $\mathsf{align*}$ environment.
+
+\begin{align*}
+(x+1)^3 &= (x+1)(x+1)(x+1) \\
+		  &= (x+1)(x^2 + 2x + 1) \\
+        &= x^3 + 3x^2 + 3x + 1
+\end{align*}
+
+Double backslash $\backslash \backslash$ for new line. An ampersand \& to separate the left column from the right column of the equaiton.
+
+\end{itemize}
+
+
+\section{Exercise : 2}
+
+Let $\mathrm{X_1,X_2,\ldots, X_n}$ be a sequence of independent and identically distributed random variables with $\mathrm{E[X_i] = \mu}$ and $\mathrm{Var]X_i = \sigma^2 < \infty},$ and let
+
+\begin{equation*}
+\mathrm{S_n = \frac{1}{n} \sum_{i = 1}^{n} X_i}
+\end{equation*}
+
+denote their mean. Then as $n$ approches infinity, the random variables $\mathrm{\sqrt{n}(S_n - \mu)}$ converge in distribution to a normal $\mathrm{N(0,\sigma^2)}$
+
+
+
+\end{document}
+
